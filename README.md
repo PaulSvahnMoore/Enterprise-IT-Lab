@@ -26,7 +26,7 @@ The lab environment runs on a virtualized infrastructure using **VMware Workstat
 |---|---|
 | Network Type | Host-only |
 | VMware Network | VMnet1 |
-| Subnet | 192.168.10.0 / 24 |
+| Subnet | 192.168.10.0/24 |
 
 The network is isolated from external networks to simulate an internal enterprise environment.
 
@@ -40,7 +40,7 @@ Host Machine
 │
 VMware Workstation Pro
 │
-VMnet1 (192.168.10.0 / 24)
+VMnet1 (192.168.10.0/24)
 │
 ├─ DC01
 │  Windows Server 2022
