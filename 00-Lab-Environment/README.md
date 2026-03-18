@@ -64,7 +64,7 @@ Host Machine
 │
 VMware Workstation Pro
 │
-VMnet1 (192.168.10.0 / 24)
+VMnet1 (192.168.10.0/24)
 │
 └─ DC01
    Windows Server 2022
@@ -78,7 +78,7 @@ VMnet1 (192.168.10.0 / 24)
 
 A host-only network (VMnet1) was configured in VMware Workstation.
 
-<img src="Screenshots/01_vmnet_configuration.png" width="30%">
+<img src="Screenshots/01_vmnet_configuration.png" width="35%">
 
 ---
 
@@ -99,7 +99,7 @@ The DC01 virtual machine was provisioned with the following configuration:
 
 ### 5.3 Operating System Installation
 
-Windows Server 2022 (Desktop Experience) was installed.
+Windows Server 2022 (Desktop Experience) was selected to simplify initial configuration and management.
 
 Post-installation:
 - Administrator account configured  
@@ -115,13 +115,15 @@ Before configuration, the server received an APIPA address:
 ```
 169.254.x.x
 ```
-Confirms that no DHCP server is present.
+This confirms that no DHCP server is present in the network.
 
-<img src="Screenshots/04_apipa_address.png" width="40%">
+<img src="Screenshots/03_apipa_address.png" width="40%">
 
 ---
 
 ### 5.5 Static IP Configuration
+
+A static IP ensures the server can be consistently reached, which is required for services such as Active Directory and DNS.
 
 A static IPv4 address was assigned:
 
@@ -137,7 +139,7 @@ Verification:
 ```
 ipconfig
 ```
-<img src="Screenshots/05_static_ip_verification.png" width="40%">
+<img src="Screenshots/04_static_ip_verification.png" width="40%">
 
 ---
 
@@ -150,7 +152,7 @@ ping 192.168.10.10
 ```
 Result: Successful
 
-<img src="Screenshots/06_ping_self.png" width="40%">
+<img src="Screenshots/05_ping_self.png" width="40%">
 
 ---
 
@@ -160,7 +162,7 @@ ping 8.8.8.8
 ```
 Result: Request timed out
 
-<img src="Screenshots/07_ping_external_blocked.png" width="40%">
+<img src="Screenshots/06_ping_external_blocked.png" width="40%">
 
 ---
 
@@ -183,11 +185,7 @@ Result: Request timed out
 
 ## 9. Outcome
 
-The environment is stable, isolated, and ready for deployment of directory services.
-
-A fully functional, isolated Windows Server environment is deployed and validated.
-
-This environment serves as the foundation for all subsequent infrastructure labs.
+The environment is stable, isolated, and fully validated, providing a foundation for deployment of directory services.
 
 ---
 
